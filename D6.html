@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mystyle.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="topper">   
+            <div class="button-set">
+                <button type="button" id="add-dice-button" class="btn btn-dark">Add a Dice</button>
+                <audio id="dice-sound" src="diceSound.mp3" preload="auto"></audio> <!-- Sound file path in src -->
+                <button type="button" id="remove-dice-button" class="btn btn-dark">Remove a Dice</button>
+                <button type="button" id="roll-button" class="btn btn-dark">Roll Dice</button>
+                <a href="./D4.html"><button type="button" class="btn-change">D4 Dice</button></a>
+
+            </div>
+        </div>
+        <div class="display-area">
+            <div class="result-display" id="result-display" style="display: none;">Result: 0</div>
+        </div>
+        
+        <div class="dice">
+            <div class="dice-container not-rolling since">
+            <ol class="die-list even-roll" data-roll="1" id="die-1">
+                <li class="die-item" data-side="1"><span><div class="face"><img src="https://www.svgrepo.com/show/481277/cat-1.svg" alt=""></div></span>
+                </li>
+                <li class="die-item" data-side="2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </li>
+            </ol>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D4 Dice Roller</title>
+    
+    <link rel="stylesheet" href="./D4.css">
+</head>
+<body>
+    <main>
+    <div>
+        <div class="topper">   
+            <div class="button-set">
+                <button type="button" id="add-dice-button" class="btn btn-dark">Add Dice</button>
+                <audio id="dice-sound" src="./dice2 Sound Effect.mp3" preload="auto"></audio> <!-- Sound file path in src -->
+                <button type="button" id="remove-dice-button"class="btn btn-dark">Remove a Dice</button>
+                <button type="button" id="roll-button"class="btn btn-dark">Roll Dice</button>
+                <a href="./D6.html"><button type="button" class="btn-change">D6 Dice</button></a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="display-area">
+            <div class="resultDisplay" id="result-display" style="display: none;">Result: 0</div>
+        </div>
+    </div>
+    
+        <div class="dice-area">
+
+        <div class="pyramid_box">
+            <div class="glow_box"></div>
+            <div>
+            <span></span> 
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            </div>
+
+        </div>
+
+        </div>
+    </main>
+    <script src="./D4.js"></script>
+</body>
+</html>

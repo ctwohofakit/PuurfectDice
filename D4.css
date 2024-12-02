@@ -14,9 +14,9 @@ main {
 	height: 100vh;
 	animation: gradient 10s ease infinite;
 }
-@media(max-width:430px){
+@media(max-width:460px){
     main {
-        height: 95vh;
+        height: 85vh!important;
         animation: gradient 10s ease infinite;
     }
 
@@ -33,7 +33,7 @@ main {
         background-color: #0b85ff;
         border-radius: 5px;
         color: #ffffff;
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
         justify-self: center;
         padding: 10px!important;
         gap: 10px;
@@ -43,7 +43,7 @@ main {
         background-color: #212529;
         border-radius: 5px;
         color: #ffffff;
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
         padding: 10px!important;
         font-weight: 300;
     }
@@ -63,7 +63,7 @@ main {
         display: flex;
         text-align: center;
         margin-top: 0px!important;
-        padding: 20px!important;
+        padding: 10px!important;
         animation: sineMovement 5s alternate ease-in-out;}
 
     
@@ -71,10 +71,12 @@ main {
         padding:5%!important;
         display: flex;
         flex-wrap: wrap; /* Allow dice to wrap to the next line if necessary */
-        gap: 18%!important;
+        gap: 15%!important;
         display: flex; /* Use flexbox to handle positioning of multiple dice */
 
     }
+
+    
 
 }
 

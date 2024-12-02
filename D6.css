@@ -28,9 +28,9 @@ main {
 	}
 }
 
-@media(max-width:430px){
+@media(max-width:460px){
     main {
-        height: 95vh;
+        height: 85vh!important;
         animation: gradient 10s ease infinite;
     }
 
@@ -47,7 +47,7 @@ main {
         background-color: #0b85ff;
         border-radius: 5px;
         color: #ffffff;
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
         justify-self: center;
         padding: 10px!important;
         gap: 10px;
@@ -57,7 +57,7 @@ main {
         background-color: #212529;
         border-radius: 5px;
         color: #ffffff;
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
         padding: 10px!important;
         font-weight: 300;
     }
@@ -80,10 +80,10 @@ main {
         animation: sineMovement 5s alternate ease-in-out;}
 
     .dice {
-        padding:18%!important;
+        padding:12%!important;
         flex-wrap: wrap; /* Ensures wrapping on smaller screens */
         justify-content: space-around; /* Aligns dice properly */
-        gap: 23% !important; /* Adjust spacing to fit smaller screens */
+        gap: 15% !important; /* Adjust spacing to fit smaller screens */
     }
     
     .die-list {

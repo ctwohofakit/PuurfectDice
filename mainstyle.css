@@ -76,7 +76,7 @@ from {
     *{margin:0;
     padding:0;}
     main{
-        height: 230vh !important;
+        height: 200vh !important;
         width: 100%;
 
     }
@@ -101,7 +101,6 @@ from {
 
     }
     .btn{
-        margin-left: 2%;
         text-align: center;
         display: inline-block;
     }
@@ -158,7 +157,6 @@ from {
     }
 
     .diceroller-body{
-        height: 120vh !important;
         padding: 10px;
     }
 
@@ -460,6 +458,8 @@ to {
 }
 }
 
+
+
 .footer-logo{
     width:40px;
 }
@@ -521,6 +521,6 @@ to {
 }
 
 .diceroller-body{
-    height: 80vh;
+    height: 90vh;
     padding: 10px;
 }

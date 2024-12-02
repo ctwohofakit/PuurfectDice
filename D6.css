@@ -28,6 +28,71 @@ main {
 	}
 }
 
+@media(max-width:430px){
+    main {
+        height: 95vh;
+        animation: gradient 10s ease infinite;
+    }
+
+
+    .topper{
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        padding: 50px;
+    }
+
+    .btn-change{
+        align-self: center;
+        background-color: #0b85ff;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 1rem !important;
+        justify-self: center;
+        padding: 10px!important;
+        gap: 10px;
+    }
+    button {
+        align-self: center;
+        background-color: #212529;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 1rem !important;
+        padding: 10px!important;
+        font-weight: 300;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: #857777;
+    }
+
+    .display-area{
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+    
+    .result-display{
+        display: flex;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        animation: sineMovement 5s alternate ease-in-out;}
+
+    .dice {
+        padding:18%!important;
+        flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+        justify-content: space-around; /* Aligns dice properly */
+        gap: 23% !important; /* Adjust spacing to fit smaller screens */
+    }
+    
+    .die-list {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
 
 .topper{
     display: flex;

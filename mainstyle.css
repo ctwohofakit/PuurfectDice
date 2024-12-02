@@ -12,9 +12,10 @@ html {
     font-family: system-ui, sans-serif;
 }
 main {
-    height: 80vh;
+    height: 120vh;
     width: 100%;
 }
+
 
 body {
     background: linear-gradient(#000000, #52326b, #833ab4);
@@ -30,14 +31,9 @@ body {
 }
 .nav-bar{
     display: flex;
-    justify-content: space-between;
-    width: 20%;
-}
-
-.top-bar li{
-    
-    list-style: none;
-    background-color: #000000;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Adds space between items */
+    width: 100%; 
 }
 
 
@@ -49,7 +45,7 @@ from {
         -webkit-transform: translate3d(1000px, 0px, 0px);
     }
 }
-@-webkit-keyframes move-background {
+@keyframes move-background {
 from {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
@@ -58,7 +54,7 @@ from {
     }
 }
 
-@-moz-keyframes move-background {    
+@keyframes move-background {    
     from {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
@@ -67,7 +63,7 @@ from {
     }
 }
 
-    @-webkit-keyframes move-background {
+@keyframes move-background {
     from {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
@@ -76,6 +72,98 @@ from {
     }
 }
 
+@media(max-width:430px){
+    *{margin:0;
+    padding:0;}
+    main{
+        height: 180vh !important;
+        width: 100%;
+
+    }
+    .context {
+        width: 80%;
+        padding: 3px;
+        position: absolute;
+        top:30vh;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .top-bar{
+        margin-top: 3%;
+        padding: 3%;   
+    }
+    .nav-bar{
+        justify-content: center; /* Ensure it's centered */
+        width: 100%; /* Allow it to adapt to smaller screens */
+        gap: 10px; /* Adjust spacing if necessary */
+
+    }
+    .btn{
+        margin-left: 2%;
+        text-align: center;
+        display: inline-block;
+    }
+    .hero-text{
+        height: 400px;
+    }
+
+
+    .main-content{
+        height: 1000px !important;
+        padding: 10px; 
+    }
+
+    
+    .card-deck{
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        flex-direction: center;
+        padding: 10% !important;
+        gap: 60px !important;
+    }
+
+    
+    .card{
+        width: 95% !important;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));/* drop shadow on transpareant image */
+    }
+    .card:hover{
+        cursor: pointer;
+    }
+
+    .card-img-top{
+        display: block;
+        padding: 0px;
+        text-align: center;
+        margin-left:0;
+        width:35%;
+    }
+
+    .card-img-sec{
+        padding: 10px;
+        margin-left: 0%;
+        width:25%;
+    }
+    
+    .card-img-th{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        margin-left: 25%;
+        width:25%;
+    }
+
+    .diceroller-body{
+        height: 80vh !important;
+        padding: 10px;
+    }
+
+    
+}
 
 .context {
     width: 100%;
@@ -115,6 +203,7 @@ from {
     background: linear-gradient(to left, #8cbb41, #4e54c8);  
     width: 100%;
     z-index: 1;
+
     pointer-events: none;
 
     
@@ -125,7 +214,7 @@ from {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%;
+    height: 55%;
     overflow: hidden;
     z-index: 1;
 }
@@ -242,10 +331,9 @@ from {
     left: 50%;
     width: 120px;
     height:auto;
-
     margin:-60px 0 0 -60px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
+    /*-webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;*/
     animation:spin 4s linear infinite;
     
 }
@@ -260,9 +348,14 @@ from {
     box-sizing: border-box;
 }
 
+/*
+.hero-text{
+    height: 10%;
+}*/
+
 .main-content{
-    height: 75px;
-    padding: 320px 0; 
+    height: 75%;
+    padding: 20% 0; 
 
 }
 
@@ -274,12 +367,29 @@ from {
     gap: 3%;
 }
 
-.card-deck:hover{
+.card:hover{
     box-shadow: #000000;
+    transform: translateY(-20px);
+}
+.card:hover img{
+    animation:spin 5s linear infinite;
+}
+
+.card-img-sec:hover{
+    animation:spin 5s linear infinite;
+}
+.card-img-th:hover{
+    animation:spin 5s linear infinite;
+}
+
+.card:hover h5{
+    animation:fadein 5s linear;
 }
 
 .card{
     width: 500px;
+    filter: drop-shadow(50px 20px 25px rgba(0, 0, 0, 0.5));/* drop shadow on transpareant image */
+
     
 }
 .card-img-top{
@@ -308,11 +418,7 @@ from {
 
 }
 
-footer{
 
-    background-color: rgb(32, 29, 29);
-
-}
 footer {
     width:100%;
     margin-top: 80px;
@@ -320,8 +426,6 @@ footer {
     color: #fff;
     background: linear-gradient(#52326b,#000000);
     text-align:center;
-
-    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {

@@ -76,7 +76,7 @@ from {
     *{margin:0;
     padding:0;}
     main{
-        height: 230vh !important;
+        height: 200vh !important;
         width: 100%;
 
     }
@@ -159,6 +159,9 @@ from {
     .diceroller-body{
         padding: 10px;
     }
+
+    .contact-form {
+        width: 98%;}
 
     
 }
@@ -523,4 +526,66 @@ to {
 .diceroller-body{
     height: 90vh;
     padding: 10px;
+}
+
+/*contact*/
+
+.contact-form {
+    height: 63vh;
+    width: 65%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadein 2s ease-in;
+
+}
+
+/* Form Title */
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #444;
+}
+
+/* Labels */
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #183452;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #141618;
+}
+.content-grid-3{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }

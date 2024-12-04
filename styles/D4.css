@@ -170,6 +170,7 @@ button:hover {
     transform-style: preserve-3d;
 }
 
+
 .pyramid_box div span {
     position: absolute;
     left: 0;
@@ -217,7 +218,7 @@ button:hover {
 
 
 .rolling {
-    animation: rolling-animation 5s ease-in-out;
+    animation: rolling-animation 3s ease-in-out;
 }
 
 

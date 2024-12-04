@@ -74,7 +74,9 @@ function rollDice() {
 }
 
     function handleRollEvent(){
-        playSound(); // Play the sound when rolling dice
+        setTimeout(() => {
+            playSound(); // Play the sound after 1 second
+        }, 1300);  // Play the sound when rolling dice
         rollDice();  // Roll the dice
     }
 

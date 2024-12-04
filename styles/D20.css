@@ -153,7 +153,7 @@ button:hover {
     padding: 10px;
 }
 .pyramid_box {
-    margin-top: 10%;
+    margin-top: 15%;
     position: relative;
     width: 100px;
     height: 100px;
@@ -350,7 +350,7 @@ h4{
 }
 
 .rolling {
-    animation: ikosaederRotate 4s ease-in-out;
+    animation: ikosaederRotate 3s ease-in-out;
 }
 
 

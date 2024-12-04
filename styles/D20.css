@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+html {
+    font-family: system-ui, sans-serif;
+}
+main {
+    background: linear-gradient(-35deg, #000000, #52326b, #833ab4, #1e463c);
+	background-size: 400% 400%;
+	height: 100vh;
+	animation: gradient 10s ease infinite;
+}
+
+@media(max-width:460px){
+    main {
+        height: 85vh!important;
+        animation: gradient-small 15s ease infinite;
+    }
+/* Create a new keyframes for the media query */
+    @keyframes gradient-small {
+        0% {
+            background-position: 0% 80%;
+        }
+        50% {
+            background-position: 70% 10%;
+        }
+        100% {
+            background-position: 0% 80%;
+        }
+    }
+
+    .topper{
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .btn-change{
+        align-self: center;
+        background-color: #0b85ff;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 0.8rem !important;
+        justify-self: center;
+        padding: 10px!important;
+        gap: 10px;
+    }
+    
+    button {
+        align-self: center;
+        background-color: #212529;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 0.8rem !important;
+        padding: 10px!important;
+        font-weight: 300;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: #857777;
+    }
+
+    .pyramid_box {
+        margin-top: 40%!important;
+    }
+
+    .display-area{
+        display: flex;
+        justify-content: center;
+        padding: 10%!important;
+    }
+
+    
+    .resultDisplay{
+        display: flex;
+        text-align: center;
+        margin-top: 0px!important;
+        animation: sineMovement 5s alternate ease-in-out;}
+
+    
+    .dice-area {
+        padding:5%!important;
+        display: flex;
+        flex-wrap: wrap; /* Allow dice to wrap to the next line if necessary */
+        gap: 8%!important;
+        display: flex; /* Use flexbox to handle positioning of multiple dice */
+
+    }
+
+    
+
+}
+
+
+
+
+
+/*animation*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+    overflow: hidden;
+}
+
+.topper{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 30px;
+}
+
+button {
+    align-self: center;
+    background-color: #212529;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    justify-self: center;
+    padding: 10px;
+    font-weight: 400;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #857777;
+}
+.btn-change {
+	font-family: system-ui;
+	border-radius: 1em !important;
+	border: none;
+	outline: none;
+	background: #dddddd;
+	cursor: pointer;
+    align-self: center;
+    background-color: #1f71c2;
+    color: #ffffff;
+    font-size: 1.25rem;
+    justify-self: center;
+    padding: 10px;
+}
+.pyramid_box {
+    margin-top: 10%;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: sineMovement 3s alternate ease-in-out infinite;
+}
+
+.ikosaeder {
+    width: 50px; /* Set a width for the dice */
+    height: 50px; /* Set a height for the dice */
+    position: relative; /* Ensure the position is relative so it doesn't overlap with others */
+    transform-style: preserve-3d;
+    /*animation: ikosaederRotate 3000ms infinite linear forwards;*/
+}
+
+.ikosaeder:hover .side {
+    opacity: 0.5;
+}
+
+.side {
+    --base-size: 50px;
+    --calc-tri-val : 0.8660254037844386;
+    --calc-height: calc(var(--calc-tri-val) * (var(--base-size) * 2));
+    --dist-from-center : calc(((3.803 * (var(--base-size) * 2)) / 4));
+        display: grid;
+    place-items: center;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 var(--base-size) var(--calc-height) var(--base-size);
+    border-color: transparent transparent #fff transparent;
+    transform-origin: 50% 100%;
+    transition: all 3s ease-in-out;
+    transform: 
+    scale(1) 
+    translateY(var(--ty, 0rem)) 
+    rotateX(var(--s, 0deg))
+    rotateY(var(--ry, 0deg)) 
+    translateZ( 4.25rem ) 
+    rotateX(var(--rx, 0deg));
+}
+.side:before{
+    --base-size: 45px;
+    --calc-height: calc(var(--calc-tri-val) * (var(--base-size) * 2));
+        content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 var(--base-size) var(--calc-height) var(--base-size);
+    border-color: transparent transparent hsl(var(--hue, 0deg), 100%, 40%) transparent;
+    translate: 0 58%;
+    transform-origin: center;
+}
+.ikosaeder .side-1 {
+    --hue: 300deg;
+    --ry: 0deg;
+    --rx: -10.54deg;
+}
+.ikosaeder .side-2 {
+    --hue: 300deg;
+    --ry: 72deg;
+    --rx: -10.54deg;
+}
+.ikosaeder .side-3 {
+    --hue: 300deg;
+    --ry: 144deg;
+    --rx: -10.54deg;
+}
+.ikosaeder .side-4 {
+    --hue: 300deg;
+    --ry: 216deg;
+    --rx: -10.54deg;
+}
+.ikosaeder .side-5 {
+    --hue: 300deg;
+    --ry: 288deg;
+    --rx: -10.54deg;
+}
+.ikosaeder .side-6 {
+    --hue: 300deg;
+    --ry: 0deg;
+    --rx: -10.54deg;
+    --ty: -5.3rem;
+    --s: 180deg;
+}
+.ikosaeder .side-7 {
+    --hue: 300deg;
+    --ry: 72deg;
+    --rx: -10.54deg;
+    --delay: 4s;
+    --ty: -5.3rem;
+    --s: 180deg;
+}
+.ikosaeder .side-8 {
+    --hue: 300deg;
+    --ry: 144deg;
+    --rx: -10.54deg;
+    --delay: 4s;
+    --ty: -5.3rem;
+    --s: 180deg;
+}
+.ikosaeder .side-9 {
+    --hue: 300deg;
+    --ry: 216deg;
+    --rx: -10.54deg;
+    --delay: 4s;
+    --ty: -5.3rem;
+    --s: 180deg;
+}
+.ikosaeder .side-10 {
+    --hue: 300deg;
+    --ry: 288deg;
+    --rx: -10.54deg;
+    --delay: 4s;
+    --ty: -5.3rem;
+    --s: 180deg;
+}
+.ikosaeder .side-11 {
+    --hue: 300deg;
+    --ry: 36deg;
+    --rx: 52.7deg;
+    --ty: -5.3rem;;
+}
+.ikosaeder .side-12 {
+    --hue: 300deg;
+    --ry: 108deg;
+    --rx: 52.7deg;
+    --ty: -5.3rem;;
+}
+.ikosaeder .side-13 {
+    --hue: 300deg;
+    --ry: 180deg;
+    --rx: 52.7deg;
+    --ty: -5.3rem;;
+}
+.ikosaeder .side-14 {
+    --hue: 300deg;
+    --ry: 252deg;
+    --rx: 52.7deg;
+    --ty: -5.3rem;;
+}
+.ikosaeder .side-15 {
+    --hue: 300deg;
+    --ry: 324deg;
+    --rx: 52.7deg;
+    --ty: -5.3rem;
+}
+.ikosaeder .side-16 {
+    --hue: 300deg;
+    --ry: 36deg;
+    --rx: 52.7deg;
+    --s: 180deg;
+}
+.ikosaeder .side-17 {
+    --hue: 300deg;
+    --ry: 108deg;
+    --rx: 52.7deg;
+    --s: 180deg;
+}
+.ikosaeder .side-18 {
+    --hue: 300deg;
+    --ry: 180deg;
+    --rx: 52.7deg;
+    --s: 180deg;
+}
+.ikosaeder .side-19 {
+    --hue: 300deg;
+    --ry: 252deg;
+    --rx: 52.7deg;
+    --s: 180deg;
+}
+.ikosaeder .side-20 {
+    --hue: 300deg;
+    --ry: 324deg;
+    --rx: 52.7deg;
+    --s: 180deg;
+}
+h4{
+    margin-top: 3%;
+    text-align: center;
+}
+
+@keyframes ikosaederRotate{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(-360deg) rotateY(360deg);
+    }
+}
+
+.rolling {
+    animation: ikosaederRotate 4s ease-in-out;
+}
+
+
+.dice-area {
+    display: flex; /* Use flexbox to position the dice */
+    flex-wrap: wrap; /* Allow dice to wrap to the next line if necessary */
+    gap: 20px; /* Add some space between the dice */
+    justify-content: center; /* Center the dice in the container */
+    padding: 20px; /* Add some padding around the dice container */
+}
+
+
+
+
+
+.display-area{
+    display: flex;
+    justify-content: center;
+}
+
+.resultDisplay{
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    height: 25px;
+    background-color: rgb(161, 204, 204);
+    background-size: 300px;
+    animation: sineMovement 5s alternate ease-in-out;
+}
+
+@keyframes sineMovement {
+    0% {
+    transform: translate(0, -30%);
+    }
+    50% {
+        transform: translate(0, -20%);
+        }
+    100% {
+    transform: translate(0, -10%);
+    }
+}

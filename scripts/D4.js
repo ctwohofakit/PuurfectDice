@@ -40,47 +40,52 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to roll all D4 dice
-    function rollDice() {
-        let total = 0;
-        const dice = diceContainer.querySelectorAll(".pyramid_box");
+// Function to roll all D4 dice
+function rollDice() {
+    let total = 0;
+    const dice = diceContainer.querySelectorAll(".pyramid_box");
 
-        // To ensure the result is displayed after all animations are complete, use setTimeout
+    // To ensure the result is displayed after all animations are complete, use setTimeout
+    dice.forEach((die) => {
+        // Randomly select an animation (1, 2, or 3)
+        const randomAnimation = Math.floor(Math.random() * 2) + 1;
+
+        // Remove any existing rolling classes to reset the animation
+        die.classList.remove("rolling-1", "rolling-2","rolling-3");
+
+        // Add the selected animation class
+        die.classList.add(`rolling-${randomAnimation}`);
+
+        // Generate a random roll result between 1 and 4
+        const result = Math.floor(Math.random() * 4) + 1;
+        total += result;
+    });
+
+    // Wait for the animations to complete (1s) before displaying the result
+    setTimeout(() => {
+        resultDisplay.textContent = `Result: ${total}`;
+        resultDisplay.style.display = "block";
+
         dice.forEach((die) => {
-            // Randomly select an animation (1, 2, or 3)
-            const randomAnimation = Math.floor(Math.random() * 2) + 1;
-
-            // Remove any existing rolling classes to reset the animation
-            die.classList.remove("rolling-1", "rolling-2","rolling-3");
-
-            // Add the selected animation class
-            die.classList.add(`rolling-${randomAnimation}`);
-
-            // Generate a random roll result between 1 and 4
-            const result = Math.floor(Math.random() * 4) + 1;
-            total += result;
+            die.classList.remove("rolling-1", "rolling-2", "rolling-3"); // Ensure rolling classes are removed
+            die.classList.add("sineMovement"); // Re-add sine movement class
         });
+    }, 3000); // This matches the animation duration of 1s
+}
 
-        // Wait for the animations to complete (1s) before displaying the result
-        setTimeout(() => {
-            resultDisplay.textContent = `Result: ${total}`;
-            resultDisplay.style.display = "block";
-
-            dice.forEach((die) => {
-                die.classList.remove("rolling-1", "rolling-2", "rolling-3"); // Ensure rolling classes are removed
-                die.classList.add("sineMovement"); // Re-add sine movement class
-            });
-        }, 3000); // This matches the animation duration of 1s
+    function handleRollEvent(){
+        playSound(); // Play the sound when rolling dice
+        rollDice();  // Roll the dice
     }
 
     // Attach event listeners to buttons
     addDiceButton.addEventListener("click", addDice);
     removeDiceButton.addEventListener("click", removeDice);
-    rollButton.addEventListener("click", function(){
-        playSound(); // Play the sound when rolling dice
-        rollDice();  // Roll the dice
-    });
+    rollButton.addEventListener("click", handleRollEvent);
+    diceContainer.addEventListener("click", handleRollEvent);
 });
+
+
 
 
 function playSound() {

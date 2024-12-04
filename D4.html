@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>D4 Dice Roller</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     
-    <link rel="stylesheet" href="./D4.css">
+    <link rel="stylesheet" href="./styles/D4.css">
 </head>
 <body>
     <main>
     <div>
+        <h4>Currently Selected - D4 Dice </h4>
         <div class="topper">   
             <div class="button-set">
-                <button type="button" id="add-dice-button" class="btn btn-dark">Add Dice</button>
-                <audio id="dice-sound" src="./dice2 Sound Effect.mp3" preload="auto"></audio> <!-- Sound file path in src -->
-                <button type="button" id="remove-dice-button"class="btn btn-dark">Remove a Dice</button>
-                <button type="button" id="roll-button"class="btn btn-dark">Roll Dice</button>
-                <a href="./D6.html"><button type="button" class="btn-change">D6 Dice</button></a>
+                <div>
+                    <a href="./D4.html"><button type="button" class="btn-change">D4 Dice</button></a>
+                    <a href="./D6.html"><button type="button" class="btn-change">D6 Dice</button></a>
+                    <a href="./D20.html"><button type="button" class="btn-change">D20 Dice</button></a>
+                </div>
+                <br>
+                <button type="button" id="add-dice-button" class="btn btn-dark">Add a Die</button>
+                <audio id="dice-sound" src="./element/dice2 Sound Effect.mp3" preload="auto"></audio> <!-- Sound file path in src -->
+                <button type="button" id="remove-dice-button"class="btn btn-dark">Remove a Die</button>
+                <button type="button" id="roll-button"class="btn btn-dark">Roll</button>
             </div>
         </div>
 
         <br>
         <br>
-        <div class="display-area">
-            <div class="resultDisplay" id="result-display" style="display: none;">Result: 0</div>
-        </div>
-    </div>
+
+    
     
         <div class="dice-area">
 
@@ -40,8 +46,12 @@
 
         </div>
 
+        <div class="display-area">
+            <div class="resultDisplay" id="result-display" style="display: none;">Result: 0</div>
         </div>
+
+        
     </main>
-    <script src="./D4.js"></script>
+    <script src="./scripts/D4.js"></script>
 </body>
 </html>

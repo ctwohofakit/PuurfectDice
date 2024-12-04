@@ -28,11 +28,14 @@ function playSound() {
     diceSound.play();
 }
 
-document.getElementById("roll-button").addEventListener("click", function() {
+function handleRollEvent(){
     playSound();
     rollDice();
-    
-});
+}
+
+    const diceContainer = document.querySelector(".dice");
+    document.getElementById("roll-button").addEventListener("click", handleRollEvent);
+    diceContainer.addEventListener("click", handleRollEvent);
 
 document.getElementById("add-dice-button").addEventListener("click", function() {
     addDice();

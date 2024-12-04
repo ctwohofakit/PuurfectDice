@@ -14,12 +14,24 @@ main {
 	height: 100vh;
 	animation: gradient 10s ease infinite;
 }
+
 @media(max-width:460px){
     main {
         height: 85vh!important;
-        animation: gradient 10s ease infinite;
+        animation: gradient-small 15s ease infinite;
     }
-
+/* Create a new keyframes for the media query */
+    @keyframes gradient-small {
+        0% {
+            background-position: 0% 80%;
+        }
+        50% {
+            background-position: 70% 10%;
+        }
+        100% {
+            background-position: 0% 80%;
+        }
+    }
 
     .topper{
         display: flex;
@@ -38,6 +50,7 @@ main {
         padding: 10px!important;
         gap: 10px;
     }
+    
     button {
         align-self: center;
         background-color: #212529;
@@ -63,7 +76,6 @@ main {
         display: flex;
         text-align: center;
         margin-top: 0px!important;
-        padding: 25px!important;
         animation: sineMovement 5s alternate ease-in-out;}
 
     
@@ -80,7 +92,10 @@ main {
 
 }
 
-
+h4{
+    margin-top: 3%;
+    text-align: center;
+}
 
 
 
@@ -122,15 +137,19 @@ button:hover {
     cursor: pointer;
     background-color: #857777;
 }
-.btn-change{
+.btn-change {
+	font-family: system-ui;
+	border-radius: 1em !important;
+	border: none;
+	outline: none;
+	background: #dddddd;
+	cursor: pointer;
     align-self: center;
-    background-color: #0b85ff;
-    border-radius: 5px;
+    background-color: #1f71c2;
     color: #ffffff;
     font-size: 1.25rem;
     justify-self: center;
     padding: 10px;
-    font-weight: 400;
 }
 
 
@@ -263,11 +282,11 @@ button:hover {
 }
 
 .resultDisplay{
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     width: 300px;
-    height: 5px;
+    height: 25px;
     background-color: rgb(161, 204, 204);
     background-size: 300px;
     animation: sineMovement 5s alternate ease-in-out;

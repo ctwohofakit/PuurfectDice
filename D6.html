@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./D6.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./styles/D6.css">
     <link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <body>
     <main>
+        <h4>Currently Selected - D6 Dice </h4>
         <div class="topper">   
             <div class="button-set">
-                <button type="button" id="add-dice-button" class="btn btn-dark">Add a Dice</button>
-                <audio id="dice-sound" src="diceSound.mp3" preload="auto"></audio> <!-- Sound file path in src -->
-                <button type="button" id="remove-dice-button" class="btn btn-dark">Remove a Dice</button>
-                <button type="button" id="roll-button" class="btn btn-dark">Roll Dice</button>
-                <a href="./D4.html"><button type="button" class="btn-change">D4 Dice</button></a>
-
+                <div>
+                    <a href="./D4.html"><button type="button" class="btn-change">D4 Dice</button></a>
+                    <a href="./D6.html"><button type="button" class="btn-change">D6 Dice</button></a>
+                    <a href="./D20.html"><button type="button" class="btn-change">D20 Dice</button></a>
+                </div>
+                <br>
+                <button type="button" id="add-dice-button" class="btn btn-dark">Add a Die</button>
+                <audio id="dice-sound" src="./element/diceSound.mp3" preload="auto"></audio> <!-- Sound file path in src -->
+                <button type="button" id="remove-dice-button" class="btn btn-dark">Remove a Die</button>
+                <button type="button" id="roll-button" class="btn btn-dark">Roll</button>
             </div>
         </div>
-        <div class="display-area">
-            <div class="result-display" id="result-display" style="display: none;">Result: 0</div>
-        </div>
+
+
         
         <div class="dice">
             <div class="dice-container not-rolling since">
@@ -63,11 +69,15 @@
             </div>
         </div>
 
+        <div class="display-area">
+            <div class="result-display" id="result-display" style="display: none;">Result: 0</div>
+        </div>
+
 
 
 
 
     </main>
-    <script src="app.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
 </body>
 </html>

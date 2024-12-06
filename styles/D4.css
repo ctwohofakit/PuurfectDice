@@ -232,7 +232,10 @@ button:hover {
     gap: 130px;
     display: flex; /* Use flexbox to handle positioning of multiple dice */
     gap: 100px; /* Add some space between dice */
-
+    
+}
+.dice-area:hover {
+    cursor: pointer;
 }
 
 @keyframes roll-animation-1 {

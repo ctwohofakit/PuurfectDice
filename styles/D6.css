@@ -184,6 +184,9 @@ body {
     gap: 130px;
     margin-top: 5%;
 }
+.dice:hover {
+    cursor: pointer;
+}
 
 .die-list {
     width: 100px;

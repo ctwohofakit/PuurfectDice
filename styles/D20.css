@@ -362,7 +362,9 @@ h4{
     padding: 10px; /* Add some padding around the dice container */
 }
 
-
+.dice-area:hover {
+    cursor: pointer;
+}
 
 
 

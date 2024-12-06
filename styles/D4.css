@@ -224,6 +224,7 @@ button:hover {
 
 .dice-area {
     padding: 150px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap; /* Allow dice to wrap to the next line if necessary */
     justify-content: center;

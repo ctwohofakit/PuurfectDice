@@ -83,4 +83,4 @@ function removeDice() {
     }
 }
 
-window.onload=handleRollEvent;
+

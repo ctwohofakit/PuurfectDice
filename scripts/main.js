@@ -1,16 +1,16 @@
 const music = document.getElementById("background-music");
 const muteIcon = document.getElementById("mute-icon");
 
-function toggleMute() {
+
+muteIcon.addEventListener('click', function () {
     if (music.muted) {
-        music.muted = false; // Unmute the audio
-        muteIcon.src = "./element/open audio.png"; 
-// Change to speaker icon
-    } else {
-        music.muted = true; // Mute the audio
+        music.muted = false; 
         muteIcon.src = "./element/close audio.png"; 
         music.play().catch(error => {
             console.log('Autoplay blocked:', error);
         });
+    } else {
+        music.muted = true; 
+        muteIcon.src = "./element/open audio.png"; 
     }
-}
+});

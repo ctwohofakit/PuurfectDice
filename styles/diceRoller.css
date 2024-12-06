@@ -80,7 +80,7 @@ from {
     *{margin:0;
     padding:0;}
     main{
-        height: 230vh !important;
+        height: 150vh !important;
         width: 100%;
 
     }
@@ -109,8 +109,9 @@ from {
         display: inline-block;
     }
     .hero-text{
-        height: 350px!important;
+        height: 400px;
     }
+
 
     .main-content{
         height: 1000px !important;
@@ -207,7 +208,9 @@ from {
     background: linear-gradient(to left, #8cbb41, #4e54c8);  
     width: 100%;
     z-index: 1;
+
     pointer-events: none;
+
     
 }
 
@@ -423,7 +426,6 @@ from {
 
 footer {
     width:100%;
-    margin-top: 80px;
     padding: 10px;
     color: #fff;
     background: linear-gradient(#52326b,#000000);

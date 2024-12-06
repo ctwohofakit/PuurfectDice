@@ -155,7 +155,7 @@ from {
     }
 
     .diceroller-body{
-        padding: 10px;
+        padding: 0px!important;
     }
 
     .contact-form {

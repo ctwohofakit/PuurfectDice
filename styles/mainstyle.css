@@ -36,7 +36,11 @@ body {
     width: 100%; 
 }
 
-
+.mute-button{
+    margin-top: 10px;
+    width: 30px;
+    height: 20px;
+}
 @keyframes move-background {
 from {
         -webkit-transform: translate3d(0px, 0px, 0px);

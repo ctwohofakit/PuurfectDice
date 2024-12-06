@@ -106,3 +106,5 @@ function playSound() {
         });
     }
 }
+
+window.onload=handleRollEvent;

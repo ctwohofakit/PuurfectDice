@@ -1,3 +1,11 @@
+const diceContainer = document.querySelector(".dice");
+document.getElementById("roll-button").addEventListener("click", handleRollEvent);
+diceContainer.addEventListener("click", handleRollEvent);
+
+document.getElementById("add-dice-button").addEventListener("click", function() {
+addDice();
+});
+
 function rollDice() {
     const dice = [...document.querySelectorAll(".die-list")];
     let total = 0;
@@ -33,13 +41,6 @@ function handleRollEvent(){
     rollDice();
 }
 
-    const diceContainer = document.querySelector(".dice");
-    document.getElementById("roll-button").addEventListener("click", handleRollEvent);
-    diceContainer.addEventListener("click", handleRollEvent);
-
-document.getElementById("add-dice-button").addEventListener("click", function() {
-    addDice();
-});
 
 function addDice() {
     const maxDice = 5; // Set the maximum number of dice
